@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><link rel="stylesheet" href="/index.ebeadb08.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="/styles.ebeadb08.css">
   </head>
   <body>
-    <script src="/index.f75de5e1.js"></script>
-  <script src="/test-task-altkraft.59712999.js"></script></body>
+    <main class="main">
+      <section class="person-list">
+        <div class="person-list__rules">
+          <p>Search by options: [name],[gender],[age],[survived]</p>
+          <p>Params order is matter</p>
+          <p>If you want to skip a parameter, put a comma</p>
+          <p>Examples</p>
+          <p>search by all: 'lin,female,yes,21'</p>
+          <p>search by age: ',,,21'</p>
+          <p>Also you can type only word start</p>
+          <p>'lin,fe,y,21'</p>
+        </div>
+        <form class="person-list__form search-bar">
+          <input class="search-bar__textfield" placeholder="Enter parameters separated by commas">
+          <button class="search-bar__submit-btn" type="submit">search</button>
+        </form>
+        <div class="table">
+          <div class="table__header table__row">
+            <div class="table__row">
+              <div class="table__cell">Name</div>
+              <div class="table__cell">Gender</div>
+              <div class="table__cell">Survived</div>
+              <div class="table__cell">Age</div>
+            </div>
+          </div>
+          <div class="table__body"></div>
+          <div class="table__scroll-link"></div>
+        </div>
+        <div class="to-up-button to-up-button__outside">↑</div>
+      </section>
+    </main>
+    <script src="/index.975ef6c8.js" defer=""></script>
+  </body>
 </html>

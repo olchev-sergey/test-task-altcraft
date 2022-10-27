@@ -1,0 +1,141 @@
+/* the easest way, not recommended for production using */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-purple: #644ded;
+  --color-dark: #264653;
+  --color-yellow: #e9c46a;
+  --color-orange: #e76f51;
+  --color-text-dark: #242533;
+  --color-light: #f9f9fc;
+  --color-light-gray: #eeeef2;
+  --color-text-light-black: #484964;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: var(--color-light);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  position: relative;
+}
+
+.person-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 15px;
+  padding: 15px;
+  width: 70%;
+}
+
+@media (max-width: 760px) {
+  .person-list {
+    width: 100%;
+  }
+}
+
+.person-list__rules {
+  margin-bottom: 20px;
+  background-color: #faf3e1;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.person-list__form {
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.search-bar__textfield {
+  flex: 1 1;
+  padding: 7px 5px;
+  border-radius: 5px;
+  border: 1px solid var(--color-light-gray);
+  background-color: rgba(93, 66, 255, 0.08);
+  color: var(--color-purple);
+}
+
+.search-bar__textfield:focus {
+  outline: 1px solid var(--color-light-gray);
+}
+
+.search-bar__submit-btn {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 7px 5px;
+  min-width: 100px;
+  cursor: pointer;
+  background-color: rgba(93, 66, 255, 0.08);
+  color: var(--color-purple);
+  border: none;
+}
+
+.table {
+  border-radius: 5px;
+  min-width: 60%;
+}
+
+.table__header .table__cell {
+  color: var(--color-text-dark);
+}
+
+.table__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table__row {
+  display: flex;
+  flex: 1 1 100%;
+  overflow-y: auto;
+}
+
+.table__cell {
+  flex: 1 1;
+  min-width: 25%;
+  padding: 10px 7px;
+  color: var(--color-text-light-black);
+}
+
+.to-up-button {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-purple);
+  border: 1px solid var(--color-light-gray);
+  font-size: 26px;
+  transition: all 0.2s linear;
+}
+
+.to-up-button__outside {
+  transform: translateX(100px);
+}
+
+.to-up-button:hover {
+  box-shadow: 0px 0px 5px 2px var(--color-purple);
+}
